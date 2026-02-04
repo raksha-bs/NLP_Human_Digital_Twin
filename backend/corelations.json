@@ -1,0 +1,108 @@
+{
+    "correlations": [
+      {
+        "from": "physical.energy_level",
+        "to": ["mental.motivation_score", "mental.stress_level", "interpersonal.Social Engagement"],
+        "type": "direct",
+        "effects": {
+          "low": {
+            "mental.motivation_score": "decrease",
+            "mental.stress_level": "increase",
+            "interpersonal.Social Engagement": "decrease"
+          },
+          "high": {
+            "mental.motivation_score": "increase",
+            "mental.stress_level": "decrease",
+            "interpersonal.Social Engagement": "increase"
+          }
+        }
+      },
+      {
+        "from": "physical.fatigue_level",
+        "to": ["mental.anxiety_level", "cognition.focus_label", "cognition.accuracy"],
+        "type": "inverse",
+        "effects": {
+          "high": {
+            "mental.anxiety_level": "increase",
+            "cognition.focus_label": "decrease",
+            "cognition.accuracy": "decrease"
+          }
+        }
+      },
+      {
+        "from": "mental.motivation_score",
+        "to": ["cognition.focus_label", "cognition.decision_score"],
+        "type": "direct",
+        "effects": {
+          "high": {
+            "cognition.focus_label": "increase",
+            "cognition.decision_score": "increase"
+          },
+          "low": {
+            "cognition.focus_label": "decrease",
+            "cognition.decision_score": "decrease"
+          }
+        }
+      },
+      {
+        "from": "mental.stress_level",
+        "to": ["cognition.focus_label", "cognition.decision_score"],
+        "type": "inverse",
+        "effects": {
+          "high": {
+            "cognition.focus_label": "decrease",
+            "cognition.decision_score": "decrease"
+          }
+        }
+      },
+      {
+        "from": "interpersonal.Leadership Score",
+        "to": ["mental.motivation_score", "cognition.decision_score"],
+        "type": "direct",
+        "effects": {
+          "high": {
+            "mental.motivation_score": "increase",
+            "cognition.decision_score": "increase"
+          }
+        }
+      },
+      {
+        "from": "interpersonal.Cooperation Score",
+        "to": ["cognition.decision_score", "cognition.accuracy"],
+        "type": "direct",
+        "effects": {
+          "high": {
+            "cognition.decision_score": "increase",
+            "cognition.accuracy": "increase"
+          }
+        }
+      },
+      {
+        "from": "physical.recovery_index",
+        "to": ["mental.stress_level", "mental.anxiety_level"],
+        "type": "inverse",
+        "effects": {
+          "low": {
+            "mental.stress_level": "increase",
+            "mental.anxiety_level": "increase"
+          },
+          "high": {
+            "mental.stress_level": "decrease",
+            "mental.anxiety_level": "decrease"
+          }
+        }
+      },
+      {
+        "from": "physical.injury_risk",
+        "to": ["interpersonal.Leadership Score", "interpersonal.Cooperation Score"],
+        "type": "inverse",
+        "effects": {
+          "high": {
+            "interpersonal.Leadership Score": "decrease",
+            "interpersonal.Cooperation Score": "decrease"
+          }
+        }
+      }
+    ]
+  }
+  
